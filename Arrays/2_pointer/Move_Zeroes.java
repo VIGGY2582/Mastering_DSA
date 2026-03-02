@@ -20,18 +20,39 @@ Constraints:
 -231 <= nums[i] <= 231 - 1
 */
 
+import java.util.*;
 
-class Solution {
-    public void moveZeroes(int[] nums) {
-      int index =0;
-      for(int i =0;i<nums.length;i++){
-        if(nums[i]!=0){
-            nums[index] = nums[i];
-            index++;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] nums = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            nums[i] = sc.nextInt();
         }
-      }  
-      for(int i = index;i<nums.length;i++){
-        nums[i] = 0;
-      }
+
+        int index = 0;
+
+        // Move non-zero elements forward
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+
+        // Fill remaining positions with 0
+        for (int i = index; i < nums.length; i++) {
+            nums[i] = 0;
+        }
+
+        // Print the result
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+
+        sc.close();
     }
 }
