@@ -1,3 +1,6 @@
+
+// 2615. Sum of Distances
+
 class Solution {
     public long[] distance(int[] nums) {
         int n = nums.length;
