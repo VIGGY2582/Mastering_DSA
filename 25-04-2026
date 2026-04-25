@@ -1,3 +1,4 @@
+// 3464. Maximize the Distance Between Points on a Square - Daily Question
 class Solution {
     public int maxDistance(int side, int[][] points, int k) {
         long[] res = new long[points.length];
