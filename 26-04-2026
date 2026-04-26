@@ -1,3 +1,5 @@
+// 1559. Detect Cycles in 2D Grid
+
 class Solution {
     static int[][] dirs = { { 0, -1 }, { 0, 1 }, { -1, 0 }, { 1, 0 } };
 
