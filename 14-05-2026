@@ -1,3 +1,5 @@
+// 2784. Check if Array is Good
+
 class Solution {
     public boolean isGood(int[] nums) {
         int n = nums.length - 1;
