@@ -1,0 +1,24 @@
+class Solution {
+    public int findMin(int[] nums) {
+        return find(nums, 0, nums.length - 1);
+    }
+
+    int find(int[] arr, int si, int li) {
+
+        // If the subarray is already sorted
+        if (arr[si] <= arr[li]) {
+            return arr[si];
+        }
+
+        int mid = si + (li - si) / 2;
+
+        // Minimum is in right half
+        if (arr[mid] >= arr[si]) {
+            return find(arr, mid + 1, li);
+        } 
+        // Minimum is in left half including mid
+        else {
+            return find(arr, si, mid);
+        }
+    }
+}
